@@ -1,5 +1,4 @@
 <h1 align="center">4. ООП <a href="https://daniilshat.ru/" target="_blank">Д/З №1</a> 
-<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <h3 align="center">14.1 Введение в ООП</h3>
 
 Задание №1
