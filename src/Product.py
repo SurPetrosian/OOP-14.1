@@ -6,10 +6,10 @@ class Product:
 цена (price),
 количество в наличии (quantity).
     """
-    name: str  # название
-    description: str  # описание
-    price: float  # цена
-    quantity: int  # кол-во в наличии
+    name: str
+    description: str
+    price: float
+    quantity: int
 
     def __init__(self, name, description, price, quantity):
         self.name = name
