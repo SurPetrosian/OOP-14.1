@@ -2,9 +2,15 @@ from src.Category import Category
 from src.Product import Product
 
 if __name__ == "__main__":
-    product1 = Product("Mercedes Bens S600", "Объем двигателя 4.0 литра, цвет черный, полный привод", 12500000.0, 10)
-    product2 = Product("BMW X6M", "Объем двигателя 4.4 литра, цвет серый, полный привод", 10500000.0, 5)
-    product3 = Product("AUDI A8", "Объем двигателя 4.0 литра, цвет белый, полный привод", 9500000.0, 12)
+    product1 = Product("Mercedes Bens S600", "Объем двигателя 4.0 литра,"
+                                             " цвет черный, полный привод",
+                       12500000.0, 10)
+    product2 = Product("BMW X6M", "Объем двигателя 4.4 литра,"
+                                  " цвет серый, полный привод",
+                       10500000.0, 5)
+    product3 = Product("AUDI A8", "Объем двигателя 4.0 литра,"
+                                  " цвет белый, полный привод",
+                       9500000.0, 12)
 
     print(product1.name)
     print(product1.description)
@@ -21,7 +27,8 @@ if __name__ == "__main__":
     print(product3.price)
     print(product3.quantity)
 
-    category1 = Category("Автомобили", "Автомобили, как средство передвижения", [product1, product2, product3])
+    category1 = Category("Автомобили", "Автомобили, как средство передвижения",
+                         [product1, product2, product3])
 
     print(category1.name == "Автомобили")
     print(category1.description)
@@ -29,8 +36,12 @@ if __name__ == "__main__":
     print(category1.category_count)
     print(category1.product_count)
 
-    product4 = Product("YAMAHA R1", "Объем двигателя 998 куб.см, цвет синий, задний привод", 2890000.0, 14)
-    category2 = Category("Мотоциклы", "Мотоциклы, как средство передвижения", [product4])
+    product4 = Product("YAMAHA R1", "Объем двигателя 998 куб.см, "
+                                    "цвет синий, задний привод",
+                       2890000.0, 14)
+    category2 = Category("Мотоциклы", "Мотоциклы, "
+                                      "как средство передвижения",
+                         [product4])
 
     print(category2.name)
     print(category2.description)
