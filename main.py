@@ -1,5 +1,5 @@
-from src.Category import Category
-from src.Product import Product
+from src.сategory import Category
+from src.product import Product
 
 if __name__ == "__main__":
     product1 = Product("Mercedes Bens S600", "Объем двигателя 4.0 литра,"
