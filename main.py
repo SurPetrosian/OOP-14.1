@@ -12,41 +12,34 @@ if __name__ == "__main__":
                                   " цвет белый, полный привод",
                        9500000.0, 12)
 
-    print(product1.name)
-    print(product1.description)
-    print(product1.price)
-    print(product1.quantity)
-
-    print(product2.name)
-    print(product2.description)
-    print(product2.price)
-    print(product2.quantity)
-
-    print(product3.name)
-    print(product3.description)
-    print(product3.price)
-    print(product3.quantity)
-
     category1 = Category("Автомобили", "Автомобили, как средство передвижения",
                          [product1, product2, product3])
 
-    print(category1.name == "Автомобили")
-    print(category1.description)
-    print(len(category1.products))
-    print(category1.category_count)
+    print(category1.products)
+
+    product4 = Product("AUDI Q8", "Объем двигателя 4.0 литра,"
+                                  "цвет оранжевый, полный привод",
+                       12000000.0, 5)
+
+    category1.add_product(product4)
+
+    print(category1.products)
     print(category1.product_count)
 
-    product4 = Product("YAMAHA R1", "Объем двигателя 998 куб.см, "
-                                    "цвет синий, задний привод",
-                       2890000.0, 14)
-    category2 = Category("Мотоциклы", "Мотоциклы, "
-                                      "как средство передвижения",
-                         [product4])
+    new_product = Product.new_product(
+        {"name": "Jaguar F-TYPE", "description": "Объем двигателя 4.4 литра, "
+         "цвет красный, задний привод", "price": 6000000.0,
+         "quantity": 5})
 
-    print(category2.name)
-    print(category2.description)
-    print(len(category2.products))
-    print(category2.products)
+    print(new_product.name)
+    print(new_product.description)
+    print(new_product.price)
+    print(new_product.quantity)
 
-    print(Category.category_count)
-    print(Category.product_count)
+    new_product.price = 800
+    print(new_product.price)
+
+    new_product.price = -100
+    print(new_product.price)
+    new_product.price = 0
+    print(new_product.price)
