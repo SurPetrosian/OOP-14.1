@@ -10,6 +10,13 @@ def product():
                               "цвет белый, полный привод", 9500000.0, 12)
 
 
+@pytest.fixture()
+def product1():
+    return Product("BMW X6M", "Объем двигателя 4.4 литра,"
+                              " цвет серый, полный привод",
+                   10500000.0, 5)
+
+
 @pytest.fixture
 def category1():
     return Category(

@@ -29,3 +29,11 @@ def test_new_product(product):
                                        "цвет красный, задний привод"
     assert new_product1.price == 6000000.0
     assert new_product1.quantity == 5
+
+
+def test_add(product, product1):
+    assert product + product1 == 166500000.0
+
+
+def test_str(product):
+    assert str(product) == 'AUDI A8, 9500000.0. Остаток: 12'

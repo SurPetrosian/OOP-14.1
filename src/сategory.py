@@ -1,3 +1,4 @@
+from src.product import Product
 class Category:
     """
 Для класса Category определен следующие свойства:
@@ -19,6 +20,9 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products)
 
+    def __str__(self):
+        return f'{self.name}, количество продуктов: {self.sum_count()}'
+
     def add_product(self, product_num):
         self.__products.append(product_num)
         Category.product_count += 1
@@ -30,6 +34,12 @@ class Category:
             product_str += f"{product.name}, {product.price}. " \
                            f"Остаток: {product.quantity}.\n"
         return product_str
+
+    def sum_count(self):
+        sum_count_product = 0
+        for product in self.__products:
+            sum_count_product += product.quantity
+        return sum_count_product
 
     @property
     def products_list(self):

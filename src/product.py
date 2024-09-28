@@ -17,6 +17,9 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+    def __str__(self):
+        return f'{self.name}, {self.__price}. Остаток: {self.quantity}'
+
     @property
     def price(self):
         return self.__price
@@ -32,3 +35,6 @@ class Product:
     def new_product(cls, product_dict: dict):
         name, description, price, quantity = product_dict.values()
         return cls(name, description, price, quantity)
+
+    def __add__(self, other):
+        return self.quantity * self.__price + other.quantity * other.__price

@@ -20,3 +20,11 @@ def test_products_property(category1):
                                  "Остаток: 10." \
                                  "\nBMW X6M, 10500000.0. Остаток: " \
                                  "5.\nAUDI A8, 9500000.0. Остаток: 12.\n"
+
+
+def test_sum_count(category1):
+    assert category1.sum_count() == 27
+
+
+def test_category_str(category1):
+    assert str(category1) == 'Автомобили, количество продуктов: 27'
