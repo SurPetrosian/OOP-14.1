@@ -1,7 +1,5 @@
 import pytest
 
-from src.product import Product
-
 
 def test_category_init(category1, category2):
     assert category1.name == "Автомобили"

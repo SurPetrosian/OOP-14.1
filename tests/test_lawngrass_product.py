@@ -15,6 +15,6 @@ def test_lawngrass_product_add(lawngrass_product1, lawngrass_product2):
     assert lawngrass_product1 + lawngrass_product2 == 16750.0
 
 
-def test_lawngrass_product_error(lawngrass_product1, lawngrass_product2):
+def test_lawngrass_product_error(lawngrass_product1):
     with pytest.raises(TypeError):
-        result = lawngrass_product1 + 1
+        lawngrass_product1 += 1

@@ -1,8 +1,7 @@
-from src.lawngrass_product import LawnGrass
 from src.product import Product
 
 
-class Category():
+class Category:
     """
 Для класса Category определен следующие свойства:
 название (name),
@@ -50,5 +49,3 @@ class Category():
     @property
     def products_list(self):
         return self.__products
-
-
