@@ -1,5 +1,8 @@
+from src.lawngrass_product import LawnGrass
 from src.product import Product
-class Category:
+
+
+class Category():
     """
 Для класса Category определен следующие свойства:
 название (name),
@@ -24,8 +27,11 @@ class Category:
         return f'{self.name}, количество продуктов: {self.sum_count()}'
 
     def add_product(self, product_num):
-        self.__products.append(product_num)
-        Category.product_count += 1
+        if isinstance(product_num, Product):
+            self.__products.append(product_num)
+            Category.product_count += 1
+        else:
+            raise TypeError
 
     @property
     def products(self):
@@ -44,3 +50,5 @@ class Category:
     @property
     def products_list(self):
         return self.__products
+
+

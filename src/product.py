@@ -37,4 +37,6 @@ class Product:
         return cls(name, description, price, quantity)
 
     def __add__(self, other):
-        return self.quantity * self.__price + other.quantity * other.__price
+        if type(other) is self.__class__:
+            return self.quantity * self.__price + other.quantity * other.__price
+        raise TypeError

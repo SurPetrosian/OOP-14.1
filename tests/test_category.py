@@ -1,3 +1,8 @@
+import pytest
+
+from src.product import Product
+
+
 def test_category_init(category1, category2):
     assert category1.name == "Автомобили"
     assert category1.description == "Автомобили, как средство передвижения"
@@ -13,6 +18,11 @@ def test_category_init(category1, category2):
 def test_add_product(category1, product):
     category1.add_product(product)
     assert len(category1.products_list) == 4
+
+
+def test_add_product_error(category1):
+    with pytest.raises(TypeError):
+        category1.add_product(1)
 
 
 def test_products_property(category1):
