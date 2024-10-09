@@ -1,4 +1,8 @@
-class Product:
+from src.base_product import BaseProduct
+from src.print_mixin import PrintMixin
+
+
+class Product(BaseProduct, PrintMixin):
     """
 Для класса Product определен следующие свойства:
 название (name),
@@ -16,6 +20,7 @@ class Product:
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__()
 
     def __str__(self):
         return f'{self.name}, {self.__price}. Остаток: {self.quantity}'
@@ -40,3 +45,7 @@ class Product:
         if type(other) is self.__class__:
             return self.quantity * self.__price + other.quantity * other.__price
         raise TypeError
+
+
+product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+
