@@ -15,6 +15,7 @@ def test_category_init(category1, category2):
 
 def test_add_product(category1, product):
     category1.add_product(product)
+
     assert len(category1.products_list) == 4
 
 
@@ -36,3 +37,8 @@ def test_sum_count(category1):
 
 def test_category_str(category1):
     assert str(category1) == 'Автомобили, количество продуктов: 27'
+
+
+def test_middle_count(category1, category3):
+    assert category1.middle_price() == 10796296.3
+    assert category3.middle_price() == 0

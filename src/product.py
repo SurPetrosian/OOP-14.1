@@ -19,7 +19,10 @@ class Product(BaseProduct, PrintMixin):
         self.name = name
         self.description = description
         self.__price = price
-        self.quantity = quantity
+        if quantity <= 0:
+            raise ValueError('Товар с нулевым количеством не может быть добавлен')
+        else:
+            self.quantity = quantity
         super().__init__()
 
     def __str__(self):
@@ -47,4 +50,4 @@ class Product(BaseProduct, PrintMixin):
         raise TypeError
 
 
-product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 1)
